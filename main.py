@@ -5,6 +5,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 from sklearn.metrics import classification_report, accuracy_score
 
+print("SVM model")
+
 def train_and_evaluate():
     # TODO: add arguments and argument parsing for high-level configuration
 
