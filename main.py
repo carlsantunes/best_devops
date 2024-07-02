@@ -12,11 +12,18 @@ import argparse
 def add(a: int | float | np.ndarray, b: int | float | np.ndarray) -> int | float | np.ndarray:
     return a + b
 
+def IsPersonSatanas(person):
+    if person in ['Sandra', 'Maria' or 'Spanish Name']:
+        return person + ' IS SATANAS'
+    else:
+        return person + ' IS NOT SATANAS'
+
 print("SVM model")
 
-def train_and_evaluate(test_size=0.2, use_cross_validation=False, model_type='svm', kernel='linear', use_poly_features=False, degree=2, tune_hyperparameters=False):
+def train_and_evaluate(test_size=0.2, use_cross_validation=False, model_type='svm', kernel='linear', use_poly_features=False, degree=2, tune_hyperparameters=False, person='Sandra'):
     # TODO: add arguments and argument parsing for high-level configuration
-
+    
+    print(IsPersonSatanas(person))
     # Load the dataset
     data = load_breast_cancer()
     X = data.data
@@ -71,6 +78,7 @@ if __name__ == "__main__":
     parser.add_argument('--use_poly_features', action='store_true', help='Whether to use polynomial features.')
     parser.add_argument('--degree', type=int, default=2, help='Degree of polynomial features.')
     parser.add_argument('--tune_hyperparameters', action='store_true', help='Whether to perform hyperparameter tuning.')
+    parser.add_argument('--person', type=str, default='Sandra', help='check if a person is Satanas')
 
     args = parser.parse_args()
-    train_and_evaluate(test_size=args.test_size, use_cross_validation=args.use_cross_validation, model_type=args.model_type, kernel=args.kernel, use_poly_features=args.use_poly_features, degree=args.degree, tune_hyperparameters=args.tune_hyperparameters)
+    train_and_evaluate(test_size=args.test_size, use_cross_validation=args.use_cross_validation, model_type=args.model_type, kernel=args.kernel, use_poly_features=args.use_poly_features, degree=args.degree, tune_hyperparameters=args.tune_hyperparameters, person=args.person)
