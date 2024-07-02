@@ -11,10 +11,10 @@ def test_add():
 # TODO: add more tests
 def test_IsPersonSatanas():
     person = Sandra
-    assert IsPersonSatanas(person) = person + ' IS SATANAS'
+    assert IsPersonSatanas(person) == person + ' IS SATANAS'
     person = Maria
-    assert IsPersonSatanas(person) = person + ' IS SATANAS'
+    assert IsPersonSatanas(person) == person + ' IS SATANAS'
     person = Carlos
-    assert IsPersonSatanas(person) = person + ' IS NOT SATANAS'
+    assert IsPersonSatanas(person) == person + ' IS NOT SATANAS'
     person = John
-    assert IsPersonSatanas(person) = person + ' IS NOT SATANAS'
+    assert IsPersonSatanas(person) == person + ' IS NOT SATANAS'
