@@ -1,4 +1,4 @@
-from main import add
+from main import add, IsPersonSatanas
 import numpy as np
 
 def test_add():
