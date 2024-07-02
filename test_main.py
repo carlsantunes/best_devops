@@ -9,3 +9,12 @@ def test_add():
     assert (add(np.array([1, 2]), 3) == np.array([4, 5])).all()
 
 # TODO: add more tests
+def test_IsPersonSatanas():
+    person = Sandra
+    assert IsPersonSatanas(person) = person + ' IS SATANAS'
+    person = Maria
+    assert IsPersonSatanas(person) = person + ' IS SATANAS'
+    person = Carlos
+    assert IsPersonSatanas(person) = person + ' IS NOT SATANAS'
+    person = John
+    assert IsPersonSatanas(person) = person + ' IS NOT SATANAS'
