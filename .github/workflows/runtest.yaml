@@ -3,7 +3,7 @@ name: Run tests
 on:
   push:
     branches:
-      - main
+      - CI_testing_branch
   pull_request:
     branches:
       - main
@@ -11,7 +11,7 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-latest
-    
+
     # TODO: add more systems to test on
 
     steps:
